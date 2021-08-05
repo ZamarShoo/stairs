@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'Visuelt Pro';
+  src: local("Visuelt Pro  Bold"), local("Visuelt-Pro--Bold"), url("../fonts/VisueltPro-Bold.woff2") format("woff2"), url("../fonts/VisueltPro-Bold.woff") format("woff"), url("../fonts/VisueltPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+section {
+  max-width: 1230px;
+  padding: 0 35px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Visuelt Pro';
+  font-size: 44px;
+  line-height: 140%;
+  color: #4F4E4D;
+}
+
+h1.inner, h2, h3, h4 {
+  font-weight: 500;
+  line-height: 140%;
+  color: #4F4E4D;
+}
+
+h1.inner, h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 26px;
+}
+
+h1 span, h1.inner span, h2 span, h3 span, h4 span {
+  color: #F78328;
+}
+
+p, a {
+  font-size: 16px;
+  line-height: 150%;
+  color: #4F4E4D;
+}
+
+a:hover, a:focus {
+  color: #F78328;
+}
+
+a.btn {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 14px !important;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  color: #FFFFFF;
+  padding: 24px 56px 24px 40px;
+  background-color: #F78328;
+  min-width: 240px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+a.btn::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  margin-left: 10px;
+  width: 16px;
+  height: 10px;
+  background-image: url(../img/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+  top: 26px;
+}
+
+a.btn:hover, a.btn:focus {
+  background-color: #FC9544;
+}
+
+a.btn:hover::after, a.btn:focus::after {
+  margin-left: 20px;
+}
+
+a.btn.light-btn {
+  padding: 17px 43px;
+  background-color: transparent;
+  border: 2px solid #4F4E4D;
+  color: #4F4E4D;
+  min-width: auto;
+}
+
+a.btn.light-btn::after {
+  display: none !important;
+}
+
+a.btn.light-btn:hover, a.btn.light-btn:focus {
+  border-color: #F78328;
+  background-color: #F78328;
+  color: white;
+}
+/*# sourceMappingURL=constants.css.map */
