@@ -1,7 +1,14 @@
 @font-face {
   font-family: 'Visuelt Pro';
-  src: local("Visuelt Pro  Bold"), local("Visuelt-Pro--Bold"), url("../fonts/VisueltPro-Bold.woff2") format("woff2"), url("../fonts/VisueltPro-Bold.woff") format("woff"), url("../fonts/VisueltPro-Bold.ttf") format("truetype");
+  src: local("Visuelt Pro Bold"), local("Visuelt-Pro--Bold"), url("../fonts/VisueltPro-Bold.woff2") format("woff2"), url("../fonts/VisueltPro-Bold.woff") format("woff"), url("../fonts/VisueltPro-Bold.ttf") format("truetype");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Visuelt Pro Medium';
+  src: local("Visuelt Pro Medium"), local("Visuelt-Pro--Medium"), url("../fonts/VisueltPro-Medium.woff2") format("woff2"), url("../fonts/VisueltPro-Medium.woff") format("woff"), url("../fonts/VisueltPro-Medium.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -51,7 +58,7 @@ a:hover, a:focus {
   color: #F78328;
 }
 
-a.btn {
+a.btn, input[type=submit] {
   position: relative;
   display: inline-block;
   font-weight: 500;
@@ -67,10 +74,11 @@ a.btn {
   min-width: 240px;
   -webkit-transition: .3s;
   transition: .3s;
+  border: none;
   cursor: pointer;
 }
 
-a.btn::after {
+a.btn::after, input[type=submit]::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -86,12 +94,16 @@ a.btn::after {
   top: 26px;
 }
 
-a.btn:hover, a.btn:focus {
+a.btn:hover, a.btn:focus, input[type=submit]:hover, input[type=submit]:focus {
   background-color: #FC9544;
 }
 
-a.btn:hover::after, a.btn:focus::after {
+a.btn:hover::after, a.btn:focus::after, input[type=submit]:hover::after, input[type=submit]:focus::after {
   margin-left: 20px;
+}
+
+input[type=submit]:disabled {
+  cursor: not-allowed;
 }
 
 a.btn.light-btn {
@@ -110,5 +122,25 @@ a.btn.light-btn:hover, a.btn.light-btn:focus {
   border-color: #F78328;
   background-color: #F78328;
   color: white;
+}
+
+main {
+  padding-top: 163px;
+}
+
+@media screen and (max-width: 1050px) {
+  main {
+    padding-top: 60px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main {
+    padding-top: 60px;
+  }
+  section {
+    width: 300px;
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=constants.css.map */
