@@ -379,3 +379,9 @@ $('.checkbox').click(function() {
         $(this).parent().parent().parent().children('.submit').attr("disabled", true);
     }
 })
+
+
+$('.close-modal').click(function() {
+    $(this).parent().hide()
+    $(this).parent().parent().hide()
+})

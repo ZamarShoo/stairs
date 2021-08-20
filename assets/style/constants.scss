@@ -103,6 +103,32 @@ a.btn::after, input[type=submit]::after {
     top: 26px;
 }
 
+.submit-wrapper {
+    position: relative;
+    width: max-content;
+    z-index: 1;
+
+    &::after {
+        content: '';
+        background-image: url(../img/arrow-right.svg);
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-position: center;
+        z-index: 1;
+        position: absolute;
+        top: 25px;
+        right: 32px;
+        width: 16px;
+        height: 13px;
+
+        transition: .3s;
+    }
+}
+
+.submit-wrapper:hover::after, .submit-wrapper:focus::after {
+    right: 22px;
+}
+
 
 a.btn:hover, a.btn:focus, input[type=submit]:hover, input[type=submit]:focus {
     background-color: #FC9544;

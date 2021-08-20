@@ -774,7 +774,9 @@
                             <p>Я согласен с <a href="">политикой конфиденциальности</a></p>
                         </label>
                     </div>
-                    <input class="submit" type="submit" value="получить консультацию">
+                    <div class="submit-wrapper">
+                        <input class="submit" type="submit" value="получить консультацию">
+                    </div>
                 </form>
             </div>
             <div class="footer-bottom">
@@ -816,6 +818,41 @@
             </div>
         </section>
     </footer>
+
+
+    <div id="modal">
+        <div class="popup">
+
+            <div class="close-modal"></div>
+
+            <h2><span>Оставьте</span> заявку</h2>
+            <p>Менеджер перезвонит вам<br>в ближайшее время</p>
+            <form>
+                <div class="form-input-wrapper">
+                    <div><input type="tel" placeholder="Ваш телефон"></div>
+                    <div><input type="text" placeholder="Ваше имя"></div>
+                </div>
+                <div>
+                    <label class="checkedLabel checkedLabel-active">
+                        <input type="checkbox" name="" class="checkbox" checked>
+                        <div class="checkbox-image">
+                            <i></i>
+                        </div>
+                        <p>Я согласен с <a href="">политикой конфиденциальности</a></p>
+                    </label>
+                </div>
+                <div class="submit-wrapper">
+                    <input class="submit" type="submit" value="оставить заявку">
+                </div>
+            </form>
+        </div>
+        <div class="thanks">
+            <img src="./assets/img/thanks.svg" alt="">
+            <h2><span>Спасибо</span> за заявку!</h2>
+            <p>Наш менеджер перезвонит вам в ближайшее время</p>
+            <a href="" class="btn">закрыть</a>
+        </div>
+    </div>
     
 
     <script src="./assets/lib/scripts/jquery.min.js"></script>

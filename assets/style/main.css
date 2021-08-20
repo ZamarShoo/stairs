@@ -460,6 +460,34 @@ a.btn::after, input[type=submit]::after {
   top: 26px;
 }
 
+.submit-wrapper {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 1;
+}
+
+.submit-wrapper::after {
+  content: '';
+  background-image: url(../img/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
+  z-index: 1;
+  position: absolute;
+  top: 25px;
+  right: 32px;
+  width: 16px;
+  height: 13px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.submit-wrapper:hover::after, .submit-wrapper:focus::after {
+  right: 22px;
+}
+
 a.btn:hover, a.btn:focus, input[type=submit]:hover, input[type=submit]:focus {
   background-color: #FC9544;
 }
@@ -2594,6 +2622,7 @@ input[type=text]:hover, input[type=tel]:hover, input[type=text]:focus, input[typ
   position: relative;
   margin-right: 12px;
   width: 17px;
+  min-width: 17px;
   height: 17px;
   border-radius: 50%;
   background-color: #FFFFFF;
@@ -2615,6 +2644,7 @@ input[type=text]:hover, input[type=tel]:hover, input[type=text]:focus, input[typ
 .checkedLabel-active .checkbox-image i {
   background: #F78328;
   width: 12px;
+  min-width: 12px;
   height: 12px;
   border-radius: 50%;
   z-index: 1;
@@ -2815,6 +2845,138 @@ input[type=text]:hover, input[type=tel]:hover, input[type=text]:focus, input[typ
   }
   .footer-bottom--top-r .col {
     width: 215px;
+  }
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup {
+  width: 760px;
+  height: 460px;
+  background: #2D2D2D;
+  position: relative;
+  display: none;
+  padding: 70px 80px;
+}
+
+.popup .close-modal {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  background-image: url(../img/close.svg);
+  cursor: pointer;
+}
+
+.popup h2, .popup p, .popup a {
+  color: white;
+}
+
+.popup p {
+  margin: 15px 0;
+}
+
+.popup input[type=tel], .popup input[type=text] {
+  width: 260px;
+}
+
+.popup .form-input-wrapper > div:first-child {
+  margin-right: 20px;
+}
+
+.popup .form-input-wrapper {
+  margin-bottom: 10px;
+}
+
+.thanks {
+  width: 420px;
+  height: 480px;
+  background: #2D2D2D;
+  position: relative;
+  padding: 55px;
+  text-align: center;
+}
+
+.thanks p, .thanks h2 {
+  color: white;
+}
+
+.thanks p {
+  margin: 20px 0 40px;
+}
+
+.thanks h2 {
+  font-size: 32px;
+}
+
+.thanks a.btn::after {
+  display: none;
+}
+
+.thanks a.btn {
+  padding: 24px 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .popup {
+    width: 300px;
+    height: 542px;
+    padding: 50px 20px;
+  }
+  .popup .form-input-wrapper > div:first-child {
+    margin-right: 0;
+  }
+  .popup input[type=tel], .popup input[type=text], .popup input[type=submit] {
+    width: 260px;
+    min-width: 260px;
+  }
+  .popup .checkedLabel {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .popup .checkedLabel .checkbox-image {
+    top: 2px;
+  }
+  .popup .form-input-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .thanks {
+    width: 300px;
+    height: 502px;
+    padding: 55px;
+    padding: 60px 20px;
+  }
+  .thanks p {
+    margin: 20px 0 60px;
+  }
+  .thanks h2 {
+    font-size: 26px !important;
+  }
+  .thanks a.btn {
+    width: 260px;
+    min-width: 260px;
   }
 }
 /*# sourceMappingURL=main.css.map */
