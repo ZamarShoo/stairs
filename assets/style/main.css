@@ -2856,9 +2856,7 @@ input[type=text]:hover, input[type=tel]:hover, input[type=text]:focus, input[typ
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 100;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2909,6 +2907,7 @@ input[type=text]:hover, input[type=tel]:hover, input[type=text]:focus, input[typ
 .thanks {
   width: 420px;
   height: 480px;
+  display: none;
   background: #2D2D2D;
   position: relative;
   padding: 55px;
@@ -2977,6 +2976,52 @@ input[type=text]:hover, input[type=tel]:hover, input[type=text]:focus, input[typ
   .thanks a.btn {
     width: 260px;
     min-width: 260px;
+  }
+}
+
+.page-404 h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 180px;
+  line-height: 100%;
+}
+
+.page-404 .first-index-slide section {
+  min-height: auto;
+}
+
+.info-404 {
+  max-width: 350px;
+}
+
+.info-404 > p {
+  margin: 20px 0 30px;
+}
+
+.select-btn-404 {
+  text-align: center;
+  width: 300px;
+}
+
+.select-btn-404 p {
+  margin: 20px 0 15px;
+}
+
+.portfolio-link--404 {
+  color: #F78328;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 650px) {
+  .info-404 {
+    max-width: 100% !important;
+    text-align: center;
+  }
+  .select-btn-404 {
+    margin: 0 auto;
+  }
+  .page-404 h1 {
+    font-size: 150px;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -385,3 +385,15 @@ $('.close-modal').click(function() {
     $(this).parent().hide()
     $(this).parent().parent().hide()
 })
+
+$('.open-popup').click(function(e) {
+    e.preventDefault()
+    $('#modal').css({'display': 'flex'})
+    $('#modal').children('.popup').show()
+})
+
+$('.thanks a.btn').click(function(e) {
+    e.preventDefault()
+    $(this).parent().hide()
+    $(this).parent().parent().hide()
+})

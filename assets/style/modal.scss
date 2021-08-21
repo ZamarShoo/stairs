@@ -1,0 +1,105 @@
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba($color: #000000, $alpha: .6);
+    z-index: 100;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    width: 760px;
+    height: 460px;
+    background: #2D2D2D;
+    position: relative;
+
+    display: none;
+
+    .close-modal {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 20px;
+        right: 20px;
+        background-image: url(../img/close.svg);
+
+        cursor: pointer;
+    }
+
+    padding: 70px 80px;
+
+    h2, p, a {color: white;}
+    p {margin: 15px 0;}
+    input[type=tel], input[type=text] {width: 260px;}
+    .form-input-wrapper > div:first-child {
+        margin-right: 20px;
+    }
+    .form-input-wrapper {margin-bottom: 10px;}
+}
+
+.thanks {
+    width: 420px;
+    height: 480px;
+
+    display: none;
+
+    background: #2D2D2D;
+    position: relative;
+    padding: 55px;
+    text-align: center;
+
+    p, h2 {color: white}
+
+    p {
+        margin: 20px 0 40px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    a.btn::after {display: none;}
+    a.btn {padding: 24px 40px;}
+}
+
+@media screen and (max-width: 767px) {
+    .popup {
+        width: 300px;
+        height: 542px;
+        padding: 50px 20px;
+        .form-input-wrapper > div:first-child {margin-right: 0;}
+        input[type=tel], input[type=text], input[type=submit] {width: 260px;min-width:260px;}
+
+        .checkedLabel {
+            align-items: baseline;
+
+            .checkbox-image {top: 2px;}
+        }
+    }
+    .popup .form-input-wrapper {
+        flex-direction: column;
+    }
+    .thanks {
+        width: 300px;
+        height: 502px;
+        padding: 55px;
+
+        padding: 60px 20px;
+    
+    
+        p {
+            margin: 20px 0 60px;
+        }
+    
+        h2 {
+            font-size: 26px !important;
+        }
+        a.btn {width: 260px;min-width: 260px;}
+    }
+}
