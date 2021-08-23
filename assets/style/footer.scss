@@ -1,5 +1,5 @@
 footer {
-    padding: 120px 0 60px;
+    padding: 60px 0 60px;
     margin-top: 160px;
     background: #2D2D2D;
 
@@ -16,6 +16,7 @@ footer {
 
 .footer-top {
     position: relative;
+    margin-top: 60px;
     padding-bottom: 80px;
     margin-bottom: 30px;
 
@@ -163,6 +164,8 @@ input[type=text]:hover, input[type=tel]:hover, input[type=text]:focus, input[typ
     }
 }
 
+footer h2 span {color: #F78328 !important;}
+
 .footer-bottom--top-l > div span {
     margin-top: -5px;
     display: block !important;
@@ -241,7 +244,7 @@ input[type=text]:hover, input[type=tel]:hover, input[type=text]:focus, input[typ
 @media screen and (max-width: 740px) {
     footer {
         margin-top: 120px;
-        padding: 100px 0 30px;
+        padding: 40px 0 30px;
     }
     .footer-bottom--top-r {
         flex-direction: column;

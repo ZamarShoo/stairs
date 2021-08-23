@@ -270,30 +270,32 @@ ul.children {
         display: block;
         text-align: center;
 
-        .social {
-            margin: 35px auto 50px;
-            display: flex;
-            justify-content: space-evenly;
-            width: 240px;
+        
+    }
+}
 
-            i {
-                display: inline-block;
-                width: 60px;
-                height: 60px;
-                background-repeat: no-repeat;
-                background-size: 60px;
-                background-position: center;
-            }
+.social {
+    margin: 35px auto 50px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 240px;
 
-            a:nth-child(1) i {
-                background-image: url(../img/instagram_social.svg);
-            }
-            a:nth-child(2) i {
-                background-image: url(../img/whatsapp_social.svg);
-            }
-            a:nth-child(3) i {
-                background-image: url(../img/viber_social.svg);
-            }
-        }
+    i {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background-repeat: no-repeat;
+        background-size: 60px;
+        background-position: center;
+    }
+
+    a:nth-child(1) i {
+        background-image: url(../img/instagram_social.svg);
+    }
+    a:nth-child(2) i {
+        background-image: url(../img/whatsapp_social.svg);
+    }
+    a:nth-child(3) i {
+        background-image: url(../img/viber_social.svg);
     }
 }

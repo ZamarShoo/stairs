@@ -104,7 +104,9 @@
     z-index: 1;
 }
 
-#counter, .secondSliderCounter, .secondSliderCounter-m {
+#slider-nav {width: 100px;margin-bottom: 50px;}
+
+#counter, .secondSliderCounter, .secondSliderCounter-m, #slider-nav, #slider-m-nav {
     p {
         font-weight: 500;
         font-size: 40px;
@@ -204,7 +206,7 @@
     .first-index-slide section ul {
         margin: 30px 0 40px;
     }
-    #counter p, .secondSliderCounter p, .secondSliderCounter-m p {
+    #counter p, .secondSliderCounter p, .secondSliderCounter-m p, #slider-nav p, #slider-m-nav p {
         padding-right: 28px;
     }
 }

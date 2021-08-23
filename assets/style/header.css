@@ -358,32 +358,37 @@ ul.children a {
     display: block;
     text-align: center;
   }
-  .mobile__bottom .social {
-    margin: 35px auto 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    width: 240px;
-  }
-  .mobile__bottom .social i {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    background-repeat: no-repeat;
-    background-size: 60px;
-    background-position: center;
-  }
-  .mobile__bottom .social a:nth-child(1) i {
-    background-image: url(../img/instagram_social.svg);
-  }
-  .mobile__bottom .social a:nth-child(2) i {
-    background-image: url(../img/whatsapp_social.svg);
-  }
-  .mobile__bottom .social a:nth-child(3) i {
-    background-image: url(../img/viber_social.svg);
-  }
+}
+
+.social {
+  margin: 35px auto 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 240px;
+}
+
+.social i {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: 60px;
+  background-position: center;
+}
+
+.social a:nth-child(1) i {
+  background-image: url(../img/instagram_social.svg);
+}
+
+.social a:nth-child(2) i {
+  background-image: url(../img/whatsapp_social.svg);
+}
+
+.social a:nth-child(3) i {
+  background-image: url(../img/viber_social.svg);
 }
 /*# sourceMappingURL=header.css.map */

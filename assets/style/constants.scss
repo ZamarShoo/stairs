@@ -159,18 +159,18 @@ a.btn.light-btn:hover, a.btn.light-btn:focus {
 }
 
 main {
-    padding-top: 163px;
+    margin-top: 163px;
 }
 
 @media screen and (max-width: 1050px) {
     main {
-        padding-top: 60px;
+        margin-top: 60px;
     }
 }
 
 @media screen and (max-width: 400px) {
     main {
-        padding-top: 60px;
+        margin-top: 60px;
     }
     section {
         width: 300px;

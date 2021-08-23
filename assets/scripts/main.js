@@ -250,7 +250,7 @@ $(function() {
 
 
 
-    function initComparisons() {
+function initComparisons() {
         var x, i;
         /*find all elements with an "overlay" class:*/
         x = document.getElementsByClassName("img-comp-overlay");
@@ -325,12 +325,12 @@ $(function() {
             slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
           }
         }
-      } 
+} 
 
-      initComparisons();
+initComparisons();
 
 
-    if($('.slider-second-body')) {
+if($('.slider-second-body')) {
         $('.slider-second-body').owlCarousel({
             loop:true,
             margin:10,
@@ -366,9 +366,7 @@ $(function() {
             }
             event.preventDefault();
         }
-    }
-
-
+}
 
 $('.checkbox').click(function() {
     if ($(this).is(':checked')) {
@@ -396,4 +394,147 @@ $('.thanks a.btn').click(function(e) {
     e.preventDefault()
     $(this).parent().hide()
     $(this).parent().parent().hide()
+})
+
+
+$(function() {
+    
+    let lenS = $('.slider-l').children().length
+    counterSlider(1, lenS)
+
+    $('.navigation-arrows-slider > img:last-child').click(function() {
+
+        let len = $('.slider-l').children().length
+        var active = $('.slider-l').find(".active").index() + 1
+        $('.slider-l').children().removeClass('active');
+        if (active === len) {active = 0}
+
+        $('.slider-l').children().each(function(index){
+            if(index <= active) {
+                if(index === active) {
+                    $(this).addClass('active');
+                }
+                if(index < active) {
+                    $(this).hide();
+                }
+            }
+            
+        })
+
+        $('.slider-r-slider').children().removeClass('active');
+        var firstActive = active + 1
+        var lastActive = active + 2
+        $('.slider-r-slider').css({'flex-direction': 'row'})
+        if (active === len - 2) {
+            $('.slider-r-slider').css({'flex-direction': 'row-reverse'})
+            lastActive = 0
+        }
+        if (active === len - 1) {
+            firstActive = 0
+            lastActive = 1
+        }
+        if (firstActive === len) { firstActive = 0; lastActive = 1}
+        if (lastActive === len) { lastActive = 0}   
+
+        $('.slider-r-slider').children().each(function(index){
+            if(firstActive === index || lastActive === index) {
+                $(this).addClass('active');
+            } 
+        })
+
+        counterSlider(active + 1, len)
+
+    })
+
+    
+
+    $('.navigation-arrows-slider > img:first-child').click(function() {
+
+        let len = $('.slider-l').children().length
+        var active = $('.slider-l').find(".active").index() - 1
+        $('.slider-l').children().removeClass('active');
+        if (active < 0) {active = len - 1}
+
+        $('.slider-l').children().each(function(index){
+            if(index <= active) {
+                if(index === active) {
+                    $(this).addClass('active');
+                }
+                if(index < active) {
+                    $(this).hide();
+                }
+            }
+            
+        })
+
+        $('.slider-r-slider').children().removeClass('active');
+        var firstActive = active + 1
+        var lastActive = active + 2
+        $('.slider-r-slider').css({'flex-direction': 'row'})
+        if (active === len - 2) {
+            $('.slider-r-slider').css({'flex-direction': 'row-reverse'})
+            lastActive = 0
+        }
+        if (active === len - 1) {
+            firstActive = 0
+            lastActive = 1
+        }
+        if (firstActive === len) { firstActive = 0; lastActive = 1}
+        if (lastActive === len) { lastActive = 0}   
+
+        $('.slider-r-slider').children().each(function(index){
+            if(firstActive === index || lastActive === index) {
+                $(this).addClass('active');
+            } 
+        })
+
+        counterSlider(active + 1, len)
+    })
+
+    function counterSlider(i, total) {
+        if(i > 9) {
+            if(i > 9) {
+                $("#slider-nav").html(`<p>${i}<i>/</i><span>${total}</span></p>`) 
+            } else {
+                $("#slider-nav").html(`<p>0${i}<i>/</i><span>${total}</span></p>`) 
+            }
+        } else {
+                $("#slider-nav").html(`<p>0${i}<i>/</i><span>0${total}</span></p>`) 
+        }
+    }
+
+    $('.slider-m').owlCarousel({
+        loop:true,
+        nav:false,
+        dots:false,
+        items:1,
+        onInitialized: counterslider,
+        onTranslated: counterslider,
+    })
+    function counterslider(event) {
+        var items = event.item.count; // Number of items
+        var item = event.item.index + 1; // Position of the current item
+    
+        // it loop is true then reset counter from 1
+        if (item > items) {
+          item = item - items
+        }
+        if(items > 9) {
+            if(item > 9) {
+                $("#slider-m-nav").html(`<p>${item}<i>/</i><span>${items}</span></p>`) 
+            } else {
+                $("#slider-m-nav").html(`<p>0${item}<i>/</i><span>${items}</span></p>`) 
+            }
+        } else {
+            $("#slider-m-nav").html(`<p>0${item}<i>/</i><span>0${items}</span></p>`) 
+        }
+        event.preventDefault();
+    }
+    $('.slider-m-arrow>img:first-child').click(function() {
+        $('.slider-m').trigger('prev.owl.carousel');
+    })
+    $('.slider-m-arrow>img:last-child').click(function() {
+        $('.slider-m').trigger('next.owl.carousel'); 
+    })
+
 })
