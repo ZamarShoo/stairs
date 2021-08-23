@@ -3048,6 +3048,7 @@ main.page h1 {
   font-family: 'Inter', sans-serif;
   margin-top: 40px;
   font-weight: 500;
+  max-width: 700px;
 }
 
 .bread-crump ul {
@@ -4251,6 +4252,214 @@ main.page h1 {
   }
   .under-steps-form ul li p {
     font-size: 20px;
+  }
+}
+
+.outer-stairs-section {
+  margin-top: 160px;
+}
+
+.article-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.article-wrapper--header {
+  max-width: 460px;
+}
+
+.article-wrapper--header h2 {
+  margin-bottom: 30px;
+}
+
+.article-wrapper--body {
+  width: 660px;
+  min-width: 560px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+  row-gap: 50px;
+  margin-left: 20px;
+  position: relative;
+}
+
+.article-wrapper--body article {
+  width: 100%;
+  margin-bottom: 0 !important;
+}
+
+.article-wrapper--body article img {
+  width: 100%;
+  height: 310px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.article-wrapper--body article h3 {
+  font-size: 26px;
+  margin: 20px 0 10px;
+}
+
+.article-wrapper--body article p {
+  margin-bottom: 20px;
+}
+
+.more-article {
+  position: absolute;
+  bottom: -70px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #F78328;
+  cursor: pointer;
+  display: block !important;
+}
+
+.more-article::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 16px;
+  background-image: url(../img/more-article.svg);
+  background-repeat: no-repeat;
+  margin-left: 10px;
+  top: 3px;
+  position: relative;
+}
+
+.outer-stairs-section .article-wrapper {
+  position: relative;
+  padding-bottom: 115px;
+  margin-bottom: 120px;
+}
+
+.outer-stairs-section .article-wrapper::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  background: #C5C5C5;
+}
+
+.outer-info {
+  margin-top: 160px;
+}
+
+.carcas-header {
+  margin: 120px 0 60px;
+}
+
+.carcas-body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+  row-gap: 40px;
+}
+
+.carcas-body img {
+  width: 100%;
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carcas-body h3 {
+  font-size: 26px;
+  margin: 20px 0 15px;
+}
+
+@media screen and (max-width: 950px) {
+  .article-wrapper--header h2 {
+    font-size: 26px;
+  }
+  .carcas-body {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .carcas-body--b {
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+    row-gap: 20px;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .article-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .article-wrapper--body {
+    min-width: 100%;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+  .carcas-header {
+    margin: 60px 0 30px;
+  }
+  .outer-stairs-section .article-wrapper {
+    padding-bottom: 90px;
+    margin-bottom: 100px;
+  }
+  .more-article {
+    bottom: -55px;
+  }
+  .outer-info {
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .carcas-header a.btn {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .article-wrapper--body {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .carcas-body {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .carcas-body--b img {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .carcas-body--b img {
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .carcas-body--b img {
+    height: 140px;
   }
 }
 /*# sourceMappingURL=main.css.map */

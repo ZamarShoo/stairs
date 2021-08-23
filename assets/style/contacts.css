@@ -6,6 +6,7 @@ main.page h1 {
   font-family: 'Inter', sans-serif;
   margin-top: 40px;
   font-weight: 500;
+  max-width: 700px;
 }
 
 .bread-crump ul {

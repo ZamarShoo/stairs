@@ -538,3 +538,44 @@ $(function() {
     })
 
 })
+
+$(function() {
+    if($('.more-article')) {
+       $('.more-article').each(function() {
+        var parent = $(this).parent();
+        parent.children().removeClass('active')
+        parent.children().hide();
+        var len = parent.children().length;
+        if (len <= 5) {
+            parent.children().show();
+            parent.children('.more-article').attr('style', 'display: none !important');
+        }
+        else
+        {
+            parent.children().each(function(index) {
+                if (index < 4) {
+                    $(this).addClass('active')
+                    $(this).show();
+                }
+            })
+        }
+       })
+    }
+
+    $('.more-article').click(function() {
+        var parent = $(this).parent()
+        var len = parent.children().length
+        var activeLen = parent.find('.active').length
+        if (activeLen + 3 >= len) {
+            parent.children().show();
+            $(this).attr('style', 'display: none !important');
+        } else {
+            parent.children().each(function(index) {
+                if (index <= len + 1) {
+                    $(this).addClass('active')
+                    $(this).show()
+                }
+            })
+        }
+    })
+})
